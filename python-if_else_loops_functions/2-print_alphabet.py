@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-for code in range(97, 123):
-    print(chr(code), end='\n' if code == 122 else '')
+
+for alphabet in range(97, 123):
+    print("{:c}".format(alphabet), 
+          end='\n' if alphabet == 122 else '')
