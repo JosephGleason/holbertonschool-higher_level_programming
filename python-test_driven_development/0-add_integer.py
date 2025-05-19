@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """
 0-add_integer.py
-Module to perform the addition of two numbers, ensuring inputs are integers or floats,
+Module to perform the addition of 2 numbers, ensuring inputs are int or float,
 casting floats to ints, and raising errors otherwise.
 """
+
 
 def add_integer(a, b=98):
     """
