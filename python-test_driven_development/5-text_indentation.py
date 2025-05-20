@@ -1,34 +1,23 @@
 #!/usr/bin/python3
 """
-5-text_indentation.py
-Module: provides a function to prt indented text with 2 \n after ., ?, and :
+This module prints a text with 2 new lines after ., ? and :.
 """
 
 
 def text_indentation(text):
-    """Prints a text with 2 lines after each of these character ".?:"
-
-    Args:
-        text (str): must be a string
-
-    Raises:
-        TypeError: if text is not a string
     """
-
+    Prints a text with 2 new lines after ., ? and :.
+    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-
-    if not any(d in text for d in ".?:"):
-        print(text, end="")
-        return
-    notebook = ''
+    start = 0
     length = len(text)
-    for idx, char in enumerate(text):
-        notebook += char
-        if char in ".?:":
-            print(notebook.strip())
-            if idx != length - 1:
+    for i, c in enumerate(text):
+        if c in ".:?":
+            print(text[start:i + 1].strip())
+            # Solo imprime salto si no es el último carácter
+            if i + 1 < length:
                 print()
-            notebook = ""
-    if notebook:
-        print(notebook.strip())
+            start = i + 1
+    if start < length:
+        print(text[start:].strip())
