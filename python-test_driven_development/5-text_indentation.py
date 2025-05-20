@@ -23,10 +23,8 @@ def text_indentation(text):
         notebook += char
         if char in ".?:":
             print(notebook.strip())
-            # Only one blank line between segments (two newlines total)
             if idx != length - 1:
                 print()
             notebook = ""
-        # after the loop, print any remaining text
     if notebook:
         print(notebook.strip())
