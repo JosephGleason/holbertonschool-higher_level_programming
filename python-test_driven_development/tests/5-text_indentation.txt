@@ -7,5 +7,5 @@ TypeError: text must be a string
 >>> text = "Hello world. This is only a test."
 >>> text_indentation(text)
 Hello world.
-<BLANKLINE>
+
 This is only a test.
