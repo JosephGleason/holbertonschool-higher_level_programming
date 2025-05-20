@@ -17,6 +17,10 @@ def text_indentation(text):
 
     if not isinstance(text, str):
         raise TypeError("text must be a string")
+
+    if not any(d in text for d in ".?:"):
+        print(text, end="")
+        return
     notebook = ''
     length = len(text)
     for idx, char in enumerate(text):
