@@ -86,4 +86,3 @@ Test integer_validator() signature errors:
     >>> bg.integer_validator("age", 18, 19)
     Traceback (most recent call last):
     TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
-
