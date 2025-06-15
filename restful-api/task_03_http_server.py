@@ -24,13 +24,14 @@ class SimpleAPIHandler(http.server.BaseHTTPRequestHandler):
             response = "Hello, this is a simple API!"
             self.wfile.write(response.encode('utf-8'))
             
-        elif self.path == '/data':
+        elif self.path == "/data":
             self.send_response(200)
-            self.send_header('Content-type', 'application/json')
+            self.send_header("Content-type", "application/json")
             self.end_headers()
-            data = {"name": "Joe", "age": 30, "city": "New York"}
-            response = json.dumps(data)
-            self.wfile.write(response.encode('utf-8'))
+
+            response = {"name": "John", "age": 30, "city": "New York"}
+            self.wfile.write(json.dumps(response, separators=(',', ':')).encode("utf-8"))
+
             
         elif self.path == '/status':
             self.send_response(200)
