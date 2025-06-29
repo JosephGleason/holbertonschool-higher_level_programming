@@ -3,7 +3,7 @@ Tasks
 mandatory
 Write a script that lists all databases of your MySQL server.
 
-guillaume@ubuntu:~/$ cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
+guillaume@ubuntu:/$ cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
 Enter password: 
 Database                                                                                     
 information_schema                                                                           
