@@ -29,6 +29,6 @@ if __name__ == "__main__":
     # Prints list of states
     for row in cur.fetchall():
         print(row)
-
+    #close em up free resource
     cur.close()
     db.close()
