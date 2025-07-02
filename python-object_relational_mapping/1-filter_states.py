@@ -4,31 +4,28 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    # Assigning arguments to the requested variable names
-    mysql_username = sys.argv[1]
-    mysql_password = sys.argv[2]
-    database_name = sys.argv[3]
+    username = sys.argv[1]
+    password = sys.argv[2]
+    db_name = sys.argv[3]
 
-    # Connects to SQL on localhost
+    # SQL connection
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=mysql_username,
-        passwd=mysql_password,
-        db=database_name
+        user=username,
+        passwd=password,
+        db=db_name
     )
 
-    # Creates a cursor to get SQL queries
     cur = db.cursor()
 
-    # Executes SQL query that gets states
-    cur.execute(
-        "SELECT id, name FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
-    )
+    # Picks letter 'N' states in SQL to output
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC")
 
-    # Prints list of states
-    for row in cur.fetchall():
+    rows = cur.fetchall()
+    for row in rows:
         print(row)
 
+    # Exits connection
     cur.close()
     db.close()
