@@ -25,7 +25,9 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     # Executes SQL query that gets states
-    cur.execute("SELECT id, name FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cur.execute(
+        "SELECT id, name FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
+    )
 
     # Prints list of states
     for row in cur.fetchall():
