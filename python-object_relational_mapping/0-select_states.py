@@ -26,7 +26,7 @@ if __name__ == "__main__":
        
     # --- Execute the SQL query ---
     # The SQL query to select all states, sorted by id
-    cur.execute("SELECT id, name FROM states ORDER BY id ASC")
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
     
     # --- Fetch all the results ---
     # results will be a list of tuples, e.g., [(1, 'California'), (2, 'Arizona'), ...]
