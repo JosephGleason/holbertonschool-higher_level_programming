@@ -35,3 +35,4 @@ if __name__ == "__main__":
 
     cur.close()
     db.close()
+    
