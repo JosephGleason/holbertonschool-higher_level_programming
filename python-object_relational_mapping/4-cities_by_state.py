@@ -10,10 +10,8 @@ if __name__ == "__main__":
     # Assigning arguments to the requested variable names
     mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
-    database_name  = sys.argv[3]
+    database_name = sys.argv[3]
 
-
-    # Connects to SQL on localhost
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
