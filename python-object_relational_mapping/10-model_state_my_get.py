@@ -22,7 +22,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    get_state = session.query(State).filter(State.id == int(state)).first()
+    get_state = session.query(State).filter(State.id == state).first()
 
     if get_state:
         print(f"{get_state.id}")
