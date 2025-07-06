@@ -14,8 +14,8 @@ if __name__ == "__main__":
     # Read credentials and target state name
     username = sys.argv[1]
     password = sys.argv[2]
-    db_name  = sys.argv[3]
-    state    = sys.argv[4]
+    db_name = sys.argv[3]
+    state = sys.argv[4]
 
     # Create the engine
     engine = create_engine(
