@@ -2,11 +2,13 @@
 """
 Defines the State class for SQLAlchemy ORM.
 """
-from sqlalchemy import Column, Integer, String #orm library
-from sqlalchemy.ext.declarative import declarative_base
 
-#for declarative models
+from sqlalchemy import Column, Integer, String  # ORM column and data types
+from sqlalchemy.ext.declarative import declarative_base  # Declarative base
+
+
 Base = declarative_base()
+
 
 class State(Base):
     """
@@ -17,7 +19,7 @@ class State(Base):
         id (sqlalchemy.Column): The state's id.
         name (sqlalchemy.Column): The state's name.
     """
-    __tablename__ = 'states' # Link to the MySQL table named 'states'
-    
+    __tablename__ = 'states'  # Name of the MySQL table
+
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     name = Column(String(128), nullable=False)
