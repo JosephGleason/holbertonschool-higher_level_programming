@@ -8,7 +8,7 @@ from sqlalchemy import create_engine
 # creates a class that you can then use to create session objects
 from sqlalchemy.orm import sessionmaker
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
