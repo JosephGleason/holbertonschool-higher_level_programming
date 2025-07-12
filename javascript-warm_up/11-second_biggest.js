@@ -13,7 +13,7 @@ if (args.length <= 1) {
     return b - a;
   });
 
-  let uniqueNumbers = [];
+  const uniqueNumbers = [];
 
   for (let i = 0; i < sortedNumbers.length; i++) {
     if (uniqueNumbers.indexOf(sortedNumbers[i]) === -1) {
