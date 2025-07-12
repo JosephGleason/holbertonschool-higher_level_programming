@@ -1,32 +1,32 @@
 #!/usr/bin/node
 
-const args = process.argv;
-const length = args.length - 2;
+const args = process.argv.slice(2);
 
-if (length < 2) {
+if (args.length <= 1) {
   console.log(0);
 } else {
-  let max = parseInt(args[2]);
-  let secondMax = 0;
+  // Convert all args to integers
+  const numbers = args.map(function (arg) {
+    return parseInt(arg);
+  });
 
-  for (let i = 3; i < args.length; i++) {
-    const num = parseInt(args[i]);
-    if (num > max) {
-      max = num;
+  // Sort numbers in descending order
+  const sortedNumbers = numbers.sort(function (a, b) {
+    return b - a;
+  });
+
+  // Create a new array for unique numbers
+  var uniqueNumbers = [];
+
+  for (var i = 0; i < sortedNumbers.length; i++) {
+    if (uniqueNumbers.indexOf(sortedNumbers[i]) === -1) {
+      uniqueNumbers.push(sortedNumbers[i]);
     }
   }
 
-  secondMax = parseInt(args[2]);
-  for (let i = 3; i < args.length; i++) {
-    const num = parseInt(args[i]);
-    if (num > secondMax && num < max) {
-      secondMax = num;
-    }
-  }
-
-  if (secondMax === max || secondMax === parseInt(args[2])) {
+  if (uniqueNumbers.length < 2) {
     console.log(0);
   } else {
-    console.log(secondMax);
+    console.log(uniqueNumbers[1]);
   }
 }
