@@ -7,5 +7,5 @@ console.log('No argument');
 } else if (count === 1) {
     console.log('Argument found');
 } else {
-    console.log('Arguments found')
+    console.log('Arguments found');
 }
