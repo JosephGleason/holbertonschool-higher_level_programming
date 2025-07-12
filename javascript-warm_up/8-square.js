@@ -7,5 +7,5 @@ if (isNaN(num)) {
 }
 
 for (let i = 0; i < num; i++) {
-  console.log('X'.repeat(4));
+  console.log('X'.repeat(num));
 }
