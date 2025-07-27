@@ -27,4 +27,4 @@
 26. Empty is not empty
 27. Still the same?
 28. Same or not?
-[29. Python3: Mutable, Immutable... everything is object!](https://www.linkedin.com/posts/your-python-object-post)
+[29. Python3: Mutable, Immutable... everything is object!](https://www.linkedin.com/posts/joseph-v-gleason-l%C3%B3pez_python-everything-is-an-object-in-python-activity-7355371183325728768-0Gye?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkksbABKvZzepUmjN5pquchoXLAPfmVCdg)
