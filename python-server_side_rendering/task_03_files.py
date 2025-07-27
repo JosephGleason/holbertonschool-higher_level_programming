@@ -33,6 +33,20 @@ def products():
     else:
         error = "Wrong source"
 
+    #filter by product_id
+    if product_id and not error:
+        filtered = []
+        for p in products:
+            pid = p.get("id")
+            if str(pid) == str(product_id):
+                filtered.append(p)
+
+        if filtered:
+            products = filtered
+        else:
+            products = []
+            error = "Product not found"
+            
     return render_template("product_display.html", products=products, error=error)
 
 if __name__ == '__main__':
